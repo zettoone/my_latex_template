@@ -23,3 +23,9 @@
 *.vrb
 
 *.pdf
+*.jpg
+
+.*
+!.gitignore
+*~
+*.sw[a-p]
