@@ -1,8 +1,13 @@
+% This template come from http://tex.stackexchange.com/questions/29402/how-do-i-make-my-document-look-like-it-was-written-by-an-cthulhu-worshipping-madm
+% Great thanks to doncherry
+
 \documentclass[17pt]{extarticle}% This is a document class providing more font size options
 
 \usepackage[svgnames]{xcolor}
 \usepackage{graphicx}
-% \usepackage{emerald}% font package
+% I worked in MacTex, which doesn't have the emerald font package
+% To install one, just follow the instructions on http://tug.org/fonts/fontinstall.html
+\usepackage{emerald}% font package
 \usepackage[doublespacing]{setspace}% line spacing
 \usepackage[T1]{fontenc}
 \usepackage{wallpaper}
@@ -38,20 +43,16 @@
 \makeatother
 % ----------
 
-\newcommand{\eldersign}{\raisebox{-.5\height}{\includegraphics[height=3ex]{eldersignimagefile}}}
+% I can't find any insteresting symbol so I decide to skip this line XD....
+% \newcommand{\eldersign}{\raisebox{-.5\height}{\includegraphics[height=3ex]{Hexagram.jpg}}}
 
 \renewcommand*{\rmdefault}{fts}
 
-\begin{document}\pagestyle{empty}\CenterWallPaper{}{backgroundimagefile}
+\begin{document}\pagestyle{empty}\CenterWallPaper{}{Parchment.jpg}
 
 \centering% that madman wouldn't justify his writings
 \color{MidnightBlue}% my pick for "looks like ink"
 
-\cthulhu{Hello, I am crazy. I am a Cthulhu worshipping gibbering madman, unhinged by
-the horrors I have witnessed. Ia m a Cthulhu worshipping gibbering madman, unhinged by
-the horrors I have witnessed. I am a Cthulhu worshipping gibbering madman, unhinged by 
-the horrors I have witnessed. I am a Cthulhu worshipping gibbering madman, unhinged by 
-the horrors I have witnessed. I am a Cthulhu worshipping gibbering madman, unhinged by 
-the horrors I have witnessed.} \eldersign
+\cthulhu{So here is something awesome. Maybe I should use this style in my next party (if there is any...).} % \eldersign
 
 \end{document}
