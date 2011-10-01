@@ -1,0 +1,57 @@
+\documentclass[17pt]{extarticle}% This is a document class providing more font size options
+
+\usepackage[svgnames]{xcolor}
+\usepackage{graphicx}
+% \usepackage{emerald}% font package
+\usepackage[doublespacing]{setspace}% line spacing
+\usepackage[T1]{fontenc}
+\usepackage{wallpaper}
+
+% thanks to Bruno Le Floch: http://tex.stackexchange.com/q/9331/4012
+\usepackage{rotating}
+\usepackage[first=-6,last=6]{lcg} % you can play around with these values
+\makeatletter
+\newcommand{\globalrand}{\rand\global\cr@nd\cr@nd}
+\makeatother
+\newcommand{\easteregg}[1]{%
+  \expandafter\let\csname old\string#1\endcsname#1%
+  \expandafter\def\expandafter#1\expandafter##\expandafter1\expandafter{%
+    \csname old\string#1\endcsname{\protect\globalrand\protect\turnbox{\value{rand}}{##1}\protect\phantom{##1}}}%
+}
+% ----------
+
+\newcommand{\randomrotation}{}
+\easteregg\randomrotation
+
+% thanks to Martin Scharrer: http://tex.stackexchange.com/q/11598/4012
+\makeatletter
+\def\cthulhu#1{%
+    \@cthulhu#1 \@empty
+}
+\def\@cthulhu#1 #2{%
+   \randomrotation{#1}\space
+   \ifx #2\@empty\else
+    \expandafter\@cthulhu
+   \fi
+   #2%
+}
+\makeatother
+% ----------
+
+\newcommand{\eldersign}{\raisebox{-.5\height}{\includegraphics[height=3ex]{eldersignimagefile}}}
+
+\renewcommand*{\rmdefault}{fts}
+
+\begin{document}\pagestyle{empty}\CenterWallPaper{}{backgroundimagefile}
+
+\centering% that madman wouldn't justify his writings
+\color{MidnightBlue}% my pick for "looks like ink"
+
+\cthulhu{Hello, I am crazy. I am a Cthulhu worshipping gibbering madman, unhinged by
+the horrors I have witnessed. Ia m a Cthulhu worshipping gibbering madman, unhinged by
+the horrors I have witnessed. I am a Cthulhu worshipping gibbering madman, unhinged by 
+the horrors I have witnessed. I am a Cthulhu worshipping gibbering madman, unhinged by 
+the horrors I have witnessed. I am a Cthulhu worshipping gibbering madman, unhinged by 
+the horrors I have witnessed.} \eldersign
+
+\end{document}
