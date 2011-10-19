@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{url,graphicx,tabularx,array,geometry}
+\setlength{\parskip}{1ex} %--skip lines between paragraphs
+\setlength{\parindent}{0pt} %--don't indent paragraphs
+
+%-- Commands for header
+\renewcommand{\title}[1]{\textbf{#1}\\}
+\renewcommand{\line}{\begin{tabularx}{\textwidth}{X>{\raggedleft}X}\hline\\\end{tabularx}\\[-0.5cm]}
+\newcommand{\leftright}[2]{\begin{tabularx}{\textwidth}{X>{\raggedleft}X}#1%
+& #2\\\end{tabularx}\\[-0.5cm]}
+
+%\linespread{2} %-- Uncomment for Double Space
+\begin{document}
+
+\title{Paper Title}
+\line
+\leftright{\today}{John Doe} %-- left and right positions in the header
+
+\section{Getting Started}
+
+You'll need to label the problems and sections.  One option is to use
+$\backslash$section tags (shown above).  I don't like to do this because I
+think it wastes too much space... but if you don't have anything to say, it
+can save you by making the document look really classy!
+
+\textbf{Another Option}
+
+What I do more often is simply put the ``section'' titles in a
+$\backslash$textbf\{\} tag (as shown in this section).  This makes them stand
+out, but doesn't take up a lot of extra white space on the page.
+
+\textbf{All the benefits of \LaTeX}
+
+Using \LaTeX for homeworks allows you to do lots of nice things like:
+\begin{itemize}
+\item Have your work neatly typeset
+\item Impress your professors who might recognize the fonts
+\item Include equations easily
+\item Put math $\in$ the text: $\textrm{money} = \sqrt{\textrm{all evil}}$
+\item Not ever have to mess with MS Word
+\end{itemize}
+
+Being able to include equations is especially nice.  Say you were doing a
+homework the Pythagorean theorem:
+\begin{equation}
+d = \sqrt{a^2+b^2}.
+\end{equation}
+It is simple to include it right in the text!  In fact, when doing math
+homeworks I often find it simpler to code derivations in \LaTeX.  If I make a
+mistake somewhere, I can quickly change all down-line equations with a
+find-replace procedure instead of having to re-write or cross out large blocks
+of text.
+
+\end{document}
