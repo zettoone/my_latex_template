@@ -1,0 +1,87 @@
+% University of Ottawa MSc thesis style -- modifications to the report style
+% modification of suthesis style of Stanford University
+% Example of use:
+    \documentclass[12pt]{report}
+    \usepackage{amsmath,amssymb,amsthm,UOMScthesis}
+
+    \begin{document}
+    \title{How to Write Theses\\
+ 	    With Two Line Titles}
+    \author{John Henry Candidate, B.Sc., M.S.}
+	    % Remember to use your titles
+	    % Use \copyrightyear{1885} to force a particular year
+	    % for the copyright statement.
+     \copyrightfalse % do not produce a separate copyright page
+		    % otherwise use \copyrighttrue
+    \figurespagefalse % do not produce a separate figures page
+    \tablespagefalse  % do not produce a separate tables page
+% Here you insert the stuff that comes before the preface
+% Each preface section is contained in a \prefacesection and starts on a
+% new page.  These are numbered using Roman numerals.
+% If there are no such pages, do not remove the \beforepreface command
+% since it creates the title page.
+    \beforepreface
+    \prefacesection{Abstract}
+	This thesis tells you all you need to know about something.
+	The SGSR requires an abstract not exceeding 4 pages.
+    \prefacesection{Acknowledgements}
+	I would like to thank my supervisor, anyone who paid me money, etc.
+    \prefacesection{Dedication}
+	I dedicate this work to my father and mother, for example.
+%
+%
+    \afterpreface   % to print the Table of Contents,
+		    % Figures and Tables pages (if needed)
+%
+%   Now you proceed in report style with chapters, sections, etc.
+    \chapter{Introduction}
+    \chapter{Theorems}
+$$
+\left[ \begin{matrix} 1 & 2 \\ 3 & 4 \end{matrix} \right]
+$$
+\begin{equation} \label{E:myfirst}
+A = B
+\end{equation}
+This was equation \eqref{E:myfirst}.
+
+\begin{lemma} 
+This is a lemma.
+\end{lemma}
+
+\begin{theorem} \label{T:my1}
+This is a theorem.
+\end{theorem}
+
+\begin{proof}
+This is the proof of Theorem~\ref{T:my1}.
+\end{proof}
+
+\begin{definition}
+This is a definition.
+\end{definition}
+
+\begin{notation}
+This is some notation.
+\end{notation}
+
+
+    \chapter{Lemmas}
+    \chapter{Proofs}
+    \chapter{Conclusions}
+% Add appendices now.
+    \appendix
+    \chapter{A Maple Program}
+    \chapter{A review of linear algebra.}
+\begin{thebibliography}{AAA}
+\bibitem{ABC} Me, T. and You, R. (1998),
+	      A great result. {\em Wonderful Journal}\ {\bf 2}
+	      pages 1-11.
+\end{thebibliography}
+% If you have your general bibliography in a separate file mybib
+% and you wish to use the plain style (see BIBTeX)
+%    \bibliographystyle{cacm}
+%    \bibliography{mybib}
+    \addcontentsline{toc}{chapter}{Bibliography}
+
+
+\end{document}
